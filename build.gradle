@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:2.2.4'
+    testImplementation 'ru.yandex.qatools.matchers:webdriver-matchers:1.4.1'
+    testImplementation 'ru.yandex.qatools.matchers:matcher-decorators:1.4.1'
+    // https://mvnrepository.com/artifact/io.qameta.atlas/atlas-core
+    compile group: 'io.qameta.atlas', name: 'atlas-core', version: '1.8.0'
+
+    // https://mvnrepository.com/artifact/io.qameta.atlas/atlas-webdriver
+    compile group: 'io.qameta.atlas', name: 'atlas-webdriver', version: '1.8.0'
+
+}
